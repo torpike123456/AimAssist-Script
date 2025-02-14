@@ -4,10 +4,10 @@ local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local LocalPlayer = Players.LocalPlayer
-local AimbotEnabled = false
+local AimbotEnabled = true
 
 local TeamCheck = true -- If set to true then the script would only lock your aim at enemy team members.
-local AimParts = {"Torso", "UpperTorso", "LowerTorso", "Head"} -- Where the aimbot script would lock at (first item - highest priority).
+local AimParts = {"Head", "Head", "Head", "Head"} -- Where the aimbot script would lock at (first item - highest priority).
 local Sensitivity = 0.0 -- How many seconds it takes for the aimbot script to officially lock onto the target's aimpart.
 
 local CircleSides = 64 -- How many sides the FOV circle would have.
@@ -15,7 +15,7 @@ local CircleColor = Color3.fromRGB(255, 255, 255) -- (RGB) Color that the FOV ci
 local CircleTransparency = 0.25 -- Transparency of the circle.
 local CircleRadius = 80 -- The radius of the circle / FOV.
 local CircleFilled = false -- Determines whether or not the circle is filled.
-local CircleVisible = true -- Determines whether or not the circle is visible.
+local CircleVisible = false -- Determines whether or not the circle is visible.
 local CircleThickness = 0 -- The thickness of the circle.
 local ToggleAimbotKey = Enum.KeyCode.F15 -- The key that turns aimbot on/off
 local ToggleTeamCheckKey = Enum.KeyCode.F14 -- The key that toggles the team chech condition
